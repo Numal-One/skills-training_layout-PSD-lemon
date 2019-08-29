@@ -147,6 +147,7 @@ header{
 .recipe-logo {
 	width: 255px;
 	height: 108px;
+	background-color: rgba(248, 248, 248,0.8);
 }
 
 .recipe-logo img {
@@ -155,9 +156,12 @@ header{
 
 .section-recipe__article {
 	width: 35%;
+	min-width: 255px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
+	
+	
 	
 	
 }
@@ -175,7 +179,7 @@ header{
 	flex-direction: column;
 	justify-content: space-between;
 	padding: 5px;
-	
+	background-color: rgba(248, 248, 248,0.8);
 	
 }
 
@@ -244,18 +248,82 @@ header{
 /*---------------------RECIPE DETAILED SECTION----------------*/
 .section-recipe-detailed {
 	width: 80%;
+	height: 440px;
 	box-sizing: border-box;
 	margin: 85px auto 0;
 	display: flex;
 	flex-direction: row;
+	background-color: #f8f8f8;
+	justify-content: flex-start;
+	align-items: center;
+	box-shadow: 1px 1px 10px rgba(0,0,0, 0.3);
 }
 
 .recipe-detailed__image {
-	width: 50%;
+	width: 46%;
+	height: 100%;
+	overflow: hidden;
+	margin-right: 4%;
 }
 .recipe-detailed__image img {
-	width: 100%;
+	width: auto;
+	height: 100%;
 }
+
+.recipe-detailed__recipe {
+	width: 46%;
+	font-family: 'Josefin Sans';
+	font-size: 16px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.recipe-detailed__recipe h3 {
+	font-family: 'Playfair Display';
+	font-size: 30px;
+	color: #055555;
+	margin-bottom: 15px;
+}
+.recipe-detailed__recipe h4 {
+	font-family: 'Playfair Display';
+	margin: 10px 0;
+	font-weight: bold;
+}
+
+.recipe-detailed__recipe--info{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
+	align-items: flex-end;
+	
+}
+.recipe-info {
+	
+	font-size: 18px;
+}
+
+.recipe-detailed__recipe--info button {
+	font-family: 'Josefin Sans';
+	font-size: 12px;
+	width: 105px;
+	height: 28px;
+	background-color: #f8f8f8;
+	border: 1px solid #c2c2c2;
+	flex-flow: 1;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.recipe-detailed__recipe--info button:hover {
+	border: 1px solid rgba(0,0,0,.4);
+	box-shadow: 0 0 5px  rgba(0,0,0,.4);
+}	
+
+.recipe-detailed__recipe--content {
+	height: 270px;
+	overflow: auto;
+}
+
 
 
 /*-----------------RECIPE GROUP SECTION-------------------*/

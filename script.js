@@ -4,8 +4,6 @@ $(document).ready(function(){
 	
 	
 	$(".change-slide").on('click',function(){
-		
-		
 			
 			var thisSlideElement = $(".recipe-article--visible");
 			var thisSlidePosition = +(thisSlideElement.attr('data-slide-position'));
