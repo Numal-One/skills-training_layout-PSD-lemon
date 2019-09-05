@@ -4,19 +4,23 @@
 	padding: 0;
 }
 
+.section-width {
+	width: 80%;
+}
 .section--bgc {
 	background-color: #f8f8f8;
 }
 
 body{
 	background: #eaeaea url(img/Logo_for_background.png) no-repeat 50% 250px;
-	height: 1000px;
+	height: 100%;
+	
 }
 
 /*----------------------------HEADER SECTION-----------------------------*/
 
 header{
-	width: 80%;
+	/* width: 80%; */
 	height: 125px;
 	margin: 525px auto 0 auto;
 	display: flex;
@@ -31,6 +35,7 @@ header{
 }
 .logo-img {
 	width: 100%;
+	height: 100%;
 }
 
 .header__menu-and-find--wrapper {
@@ -72,9 +77,13 @@ header{
 	
 }
 
-.header__submenu-itm a {
+.header__menu a {
 	text-decoration: none;
 	color: black;
+}
+
+.burger-menu {
+	display: none;
 }
 
 .header__submenu-itm:hover {
@@ -97,7 +106,7 @@ header{
 /*---------------------SINGLE RECIPE WITH SLIDER SECTION--------------------*/
 
 .section-recipe {
-	width: calc(80% - 180px);
+	/* width: 80%; */
 	position: relative;
 	background-image: url(img/recipe_slide1.png);
 	background-repeat: no-repeat;
@@ -107,6 +116,7 @@ header{
 	margin: 100px auto;
 	background-color: #f8f8f8;
 	padding: 30px 90px;
+	box-sizing: border-box;
 	box-shadow: 1px 1px 10px rgba(0,0,0, 0.3);
 }
 .change-slide {
@@ -152,6 +162,7 @@ header{
 
 .recipe-logo img {
 	width: 100%;
+	height: 100%;
 }
 
 .section-recipe__article {
@@ -247,7 +258,7 @@ header{
 }
 /*---------------------RECIPE DETAILED SECTION----------------*/
 .section-recipe-detailed {
-	width: 80%;
+	/* width: 80%; */
 	height: 440px;
 	box-sizing: border-box;
 	margin: 85px auto 0;
@@ -324,12 +335,24 @@ header{
 	overflow: auto;
 }
 
+/* оформление скроллбара */
+
+.recipe-detailed__recipe--content::-webkit-scrollbar{
+	width: 2px;
+	height: 100%;
+	background-color:#dddddd;
+}
+
+.recipe-detailed__recipe--content::-webkit-scrollbar-thumb {
+	background-color:#555555;
+}
+
 
 
 /*-----------------RECIPE GROUP SECTION-------------------*/
 
 .section-recipees--wrapper {
-	width: 80%;
+	
 	box-sizing: border-box;
 	margin: 85px auto 0 auto;
 	padding: 40px;
@@ -374,7 +397,7 @@ header{
 
 /*-----------------------FOOTER SECTION -------------------------*/
 footer {
-	width: 80%;
+	/* width: 80%; */
 	box-sizing: border-box;
 	background-color: #2f2f2f;
 	margin: 85px auto 0;
@@ -392,7 +415,7 @@ footer {
 }
 
 .footer_logo {
-	margin-left: 35px;
+	margin-left: 5px;
 }
 
 .footer__menu {
@@ -438,6 +461,10 @@ footer {
 	text-decoration: underline;
 }
 
+.copyright {
+	text-align: right;
+}
+
 .footer__social {
 	text-align: right;
 }
@@ -451,4 +478,99 @@ footer {
 }
 
 
+/* -------------404------------------ */
 
+.couldnt-fide-page {
+	margin: 0 auto;
+	width: 90vw;
+	height: 90vh;
+	background-color: #eaeaea;
+}
+
+.couldnt-fide-page__line {
+	border-bottom: 1px solid grey;
+	margin-top: 40px;
+	font-family: 'Josefin Sans';
+}
+
+.couldnt-fide-page__plate-image {
+	height: 80%;
+	
+	background-image: url(img/404.png);
+	background-size: 100% 100% cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	
+}
+
+.couldnt-fide-page__button-wrapper{
+	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+}
+
+.couldnt-fide-page__button {
+	font-family: 'Josefin Sans';
+	font-size: 12px;
+	width: 105px;
+	height: 28px;
+	background-color: #f8f8f8;
+	border: 1px solid #c2c2c2;
+	cursor: pointer;
+	
+}
+
+/* ----------------MEDIA---------------------- */
+
+@media all and (max-width: 1050px) {
+	.section-width {
+		width: 90%;
+	}
+	.header__menu-itm {
+		padding: 0 10px;
+		
+	}
+}
+
+@media all and (max-width: 950px) {
+	body{
+		background: #eaeaea url(img/Logo_for_background.png) no-repeat 50% 150px;
+	}
+
+	header{
+		margin: 375px auto 0 auto;
+		
+	}
+	.header__menu-itm {
+		padding: 0 8px;
+		
+	}
+
+	.header__finder input {
+		width: 90px;
+		height: 16px;
+		font-size: 10px;
+		padding: 3px;
+	}
+	.header__menu {
+		font-size: 14px;
+	}
+	footer {
+		padding: 50px 30px;
+		font-size: 12px;
+	}
+}
+
+@media all and (max-width: 800px) {
+	.section-width {
+		width: 95%;
+	}
+	body{
+		background: #eaeaea url(img/Logo_for_background.png) no-repeat 50% 50px;
+	}
+
+	header{
+		margin: 275px auto 0 auto;
+		
+	}
+}

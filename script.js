@@ -2,6 +2,10 @@
 
 $(document).ready(function(){
 	
+	$('.get-recipe-btn').on('click', function(){
+		let target = $('.section-recipe-detailed');
+		$('.section-recipe-detailed').fadeToggle();
+	});
 	
 	$(".change-slide").on('click',function(){
 			
